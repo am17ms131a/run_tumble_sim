@@ -15,3 +15,5 @@ params.D=0.2;%Thermal difusion
 params.sigma=1;% partical radius
 
 %initialise bacteria
+bacteria = initialise_bacteria(params);
+
