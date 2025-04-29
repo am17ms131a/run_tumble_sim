@@ -30,8 +30,10 @@ for t =1:params.steps
     states(:,t)=bacteria.state;
     running_fraction(t)=sum(bacteria.state)/params.N;
     tumbling_fraction(t)=1-running_fraction(t);
-end
+
 
 %update bacteria position and states
 
-bacteria=update_positions(bacteria, params);
+    bacteria=update_positions(bacteria, params);
+
+end

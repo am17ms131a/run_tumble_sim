@@ -13,7 +13,7 @@ function bacteria=update_positions(bacteria,params)
             bacteria.y(i)=bacteria.y(i)+bacteria.vy(i)*dt;
             if rand<lambda_t*dt
                 bacteria.state(i)=0;
-                bacteria.theta(i)=bacteria.theta(i)+sqrt(4*dr*dt)*randn;
+                bacteria.theta(i)=bacteria.theta(i)+sqrt(4*Dr*dt)*randn;
             end
         else%tumbling
             if rand<lambda_r*dt
