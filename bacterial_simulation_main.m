@@ -38,6 +38,8 @@ for t =1:params.steps
 
     bacteria=handle_collisions(bacteria,params);
 
+    visualise_simulation(bacteria, running_fraction, tumbling_fraction, t, params);
+
 end
 
 % Save data
