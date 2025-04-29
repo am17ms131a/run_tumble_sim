@@ -36,4 +36,6 @@ for t =1:params.steps
 
     bacteria=update_positions(bacteria, params);
 
+    bacteria=handle_collisions(bacteria,params);
+
 end
