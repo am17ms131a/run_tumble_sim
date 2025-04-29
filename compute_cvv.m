@@ -36,11 +36,11 @@ function compute_cvv(positions, params)
     
     % Plot
     figure;
-    plot(tau, cvv, 'LineWidth', 2);
+    plot(tau, cvv,'ro', 'LineWidth', 2);
     xlabel('\tau');
     ylabel('C_{vv}(\tau)');
     title('Velocity Autocorrelation Function');
-    xlim([0 max(tau)]);
+    xlim([0 2]);
     
     % Save
     savefig('cvv_plot.fig');
