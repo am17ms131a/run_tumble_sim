@@ -39,3 +39,12 @@ for t =1:params.steps
     bacteria=handle_collisions(bacteria,params);
 
 end
+
+% Save data
+save('bacteria_simulation.mat', 'positions', 'states', 'running_fraction', 'tumbling_fraction');
+
+% Compute and plot velocity distribution
+compute_velocity_distribution(bacteria, params);
+
+% Compute and plot Cvv
+compute_cvv(positions, params);
