@@ -17,3 +17,21 @@ params.sigma=1;% partical radius
 %initialise bacteria
 bacteria = initialise_bacteria(params);
 
+%Storage
+positions=zeros(params.N,2, params.steps);
+states=zeros(params.N,params.steps);
+running_fraction = zeros(params.steps,1);
+tumbling_fraction = zeros(params.steps,1);
+
+%Simulation loop
+figure;
+for t =1:params.steps
+    positions(:,:,t)=[bacteria.x,bacteria.y];
+    states(:,t)=bacteria.state;
+    running_fraction(t)=sum(bacteria.state)/params.N;
+    tumbling_fraction(t)=1-running_fraction(t);
+end
+
+%update bacteria position and states
+
+bacteria=update_positions(bacteria, params);
